@@ -1,0 +1,48 @@
+section {
+    background-color: #0e0e01;
+    color: #ffffff;
+    padding: 65px;
+
+    .logo-wrapper {
+        width: auto;
+        height: auto;
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .cls-1 {
+            fill: #fff;
+        }
+
+        .cls-2 {
+            fill: #414042;
+        }
+    }
+
+
+    .bottom-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin: 0;
+            font-family: 'Larsseit', sans-serif;
+            font-size: 1.125rem;
+        }
+
+        .smaller-symbol {
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .link-bottom {
+            padding: 5px 15px;
+            margin: 0 50px;
+            cursor: pointer;
+        }
+    }
+
+}

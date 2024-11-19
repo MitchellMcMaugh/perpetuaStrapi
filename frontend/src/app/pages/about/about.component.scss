@@ -1,0 +1,121 @@
+.header-section {
+    width: 100%;
+    height: 638px;
+    background-color: #0e0e01;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .header-text {
+        max-width: 1000px;
+        font-family: 'Sohne' !important;
+        font-size: 2.25rem;
+        color: #ffffff;
+    }
+}
+
+.location-section {
+    padding: 80px 65px 0 65px;
+
+    menu {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 50px 0;
+        color: #000000;
+        font-size: 1.5rem;
+
+        .location-button {
+            list-style: none;
+            margin-right: 50px;
+        }
+
+        .menu-icon {
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+    }
+}
+
+.contact-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid #0e0e01;
+    padding-right: 15px;
+
+    .contact-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0e0e01;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        font-family: 'Sohne-500' !important;
+        font-size: 1.75rem;
+    }
+
+    .contact-icon {
+        font-size: 2rem;
+        margin-left: 5px;
+        padding-top: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        button {
+            color: #a8a8a8;
+        }
+
+        .contact-icon {
+            transform: translateX(2px);
+            color: #a8a8a8;
+        }
+    }
+}
+
+.sub-title {
+    margin: 80px 0 60px 65px;
+}
+
+.team-section {
+    padding: 40px 0;
+
+    menu {
+        width: 100%;
+        padding-left: 65px;
+        margin-bottom: 50px;
+        row-gap: 30px;
+
+        .member-button {
+            list-style: none;
+            border: none;
+            background-color: transparent;
+            font-family: 'Larsseit' !important;
+            color: #000000;
+            font-size: 1.5rem;
+
+            p {
+                margin-bottom: 5px;
+            }
+
+            .menu-icon {
+                transform: rotate(45deg);
+                display: inline-block;
+            }
+
+            &:hover {
+                p {
+                    color: #a8a8a8;
+                }
+
+                .menu-icon {
+                    color: #a8a8a8;
+                }
+            }
+        }
+    }
+}

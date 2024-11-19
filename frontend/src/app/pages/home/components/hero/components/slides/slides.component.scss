@@ -1,0 +1,34 @@
+.slide-container {
+    position: relative;
+    width: 100%;
+    height: 1041px;
+    padding: 15px;
+    z-index: 1;
+
+    --swiper-navigation-color: #ffffff;
+    --swiper-navigation-size: 1.5rem;
+    --swiper-navigation-sides-offset: 10%;
+    --swiper-navigation-top-offset: 970px;
+
+    swiper-slide {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .title {
+            position: absolute;
+            bottom: 0;
+            right: 250px;
+            color: #ffffff;
+            font-family: 'Sohne-500' !important;
+            font-size: 2.25rem;
+        }
+    }
+
+    swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+}

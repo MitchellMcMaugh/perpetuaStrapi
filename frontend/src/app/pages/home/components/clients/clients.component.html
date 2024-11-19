@@ -1,0 +1,35 @@
+<section class='w-100 m-0'>
+    <div class="row" *ngIf="clients.length > 0;">
+        <!-- Testimonial -->
+        <div class="col-6 col-md-5 left-container" *ngIf="selectedClientIndex !== null">
+            <span class="quotation">&#x201F;</span>
+            <p *ngFor="let testimonial of clients[selectedClientIndex].testimonial" class="testimonial">
+                {{testimonial.children[0].text}}
+            </p>
+            <div class="name-wrapper">
+                <span class="bar"></span>
+                <p>
+                    {{clients[selectedClientIndex].representative}},
+                    <strong>{{clients[selectedClientIndex].company_name}}</strong>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <!-- Title -->
+            <h1>
+                {{ 'home.section-title.clients-L1' | translate }}<br>
+                {{ 'home.section-title.clients-L2' | translate }}
+            </h1>
+            <!-- Client logos -->
+            <app-client-card [clients]="clients" (clientSelected)="onClientSelected($event)"></app-client-card>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer-button-wrapper" [routerLink]="['/clients']">
+        <button class="footer-button">
+            {{ 'clients.all-clients' | translate }}
+            <i class="bi bi-arrow-right-short"></i>
+        </button>
+    </div>
+    <span class="separator"></span>
+</section>

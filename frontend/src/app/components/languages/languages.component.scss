@@ -1,0 +1,176 @@
+.lang-option-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    i.bi-chevron-left {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 2px;
+        transition: transform 0.3s ease;
+        z-index: 20;
+    }
+
+    form {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        transition: right 0.3s ease, opacity 0.3s ease;
+        width: max-content;
+        white-space: nowrap;
+
+        &.visible {
+            right: 20px;
+            opacity: 1;
+        }
+
+        .language-container {
+            border: none;
+            padding: 0;
+
+            .lang-options {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+
+                .lang-option {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .hidden-radio {
+                        display: none;
+                    }
+
+                    .radio-label {
+                        padding: 1px 5px;
+                        color: #ffffff;
+                        font-family: 'Larsseit', sans-serif;
+                        font-size: 1.125rem;
+                        transition: 0.3s ease, color 0.3s ease;
+                    }
+
+                    .radio-label:hover {
+                        color: #a8a8a8;
+                    }
+                }
+            }
+        }
+    }
+
+    .current-lang-wrapper {
+        background-color: #0e0e01;
+        padding: 0 20px 0 5px;
+        cursor: pointer;
+        z-index: 20;
+
+        .current-lang {
+            font-family: 'Larsseit', sans-serif;
+            font-size: 1.125rem;
+            color: #ffffff;
+        }
+    }
+
+    &:hover form {
+        right: 95px;
+        opacity: 1;
+    }
+
+    &:hover .current-lang-wrapper {
+        padding-left: 20px;
+    }
+
+    &:hover i.bi-chevron-left {
+        transform: translateX(-150px);
+    }
+}
+
+// Footer section language option
+.bottom-lang-option {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+    position: relative;
+
+    i.bi-chevron-left {
+        margin-left: 20px;
+        margin-bottom: -5px;
+        transform: rotate(90deg);
+        transition: transform 0.1s ease;
+    }
+
+    form {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        width: max-content;
+        padding-left: 13px;
+        padding-right: 5px;
+        white-space: nowrap;
+        transition: transform 0.3s ease, opacity 0.1s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+
+        .language-container {
+            border: none;
+            padding: 0;
+
+            .lang-options {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+
+                .lang-option {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .hidden-radio {
+                        display: none;
+                    }
+
+                    .radio-label {
+                        color: #ffffff;
+                        font-family: 'Larsseit', sans-serif;
+                        font-size: 1rem;
+                        transition: 0.3s ease, color 0.3s ease;
+                    }
+
+                    .radio-label:hover {
+                        color: #a8a8a8;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-lang-wrapper {
+        padding: 8px;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        background-color: #0e0e01;
+        z-index: 20;
+
+        .current-lang {
+            font-family: 'Larsseit', sans-serif;
+            font-size: 1rem;
+        }
+    }
+
+    &:hover i.bi-chevron-left {
+        transform: rotate(90deg) translateX(-70px);
+    }
+}
